@@ -1,38 +1,483 @@
-.App {
+html{
+  max-width: 100vw;
+  max-height: 100vh;
+  background-color: #eeecec;
+}
+
+.loginmain{
+  width: 80%;
+  height: 60%;
+  margin: auto 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;    
+  align-items: center;
+}
+
+.loginleft{
+  text-align: center;
+  font-size: 1.5rem;
+  height: 30rem;
+  width: 20%;
+  display: flex;
+  align-items: center;
+  
+}
+
+.loginright{
+  height: 30rem;
+  width: 60%;
+  border: 0.4rem solid white;
+  background-color: whitesmoke;
+  text-align: center
+}
+
+.loginimage{
+  height: 30rem;
+  width: 100%;
+}
+
+.main{
+  height: 80%;
+  width: 80%;
+  margin: 4% auto;
+}
+
+input {
+  width: 80%;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  margin: 0.8rem 0;
+  border-radius: 1rem;
+  box-sizing: border-box;
+}
+
+.btnLogin {
+  background-color: rgb(82, 117, 255);
+  width: 49%;
+  border-radius: 0.8rem;
+  border: none;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  margin: 0.4rem 0.2rem;
+  cursor: pointer;
+}
+
+.btnLogin:hover{
+  background-color: transparent;
+  color: rgb(82, 117, 255);
+  border: 2px solid rgb(130, 151, 236);
+}
+
+.changeToButtons{
+  margin-top: 2rem;
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  align-items: flex-start;
+  font-size: 1.2rem;
+}
+
+.ChangeToSignup{
+  display: flex;
+  margin-bottom: 0.5rem;
+  align-items: center;
+}
+
+.btntrans{
+  border: none;
+  background-color: transparent;
+  font-size: 1rem;
+  padding: 0;
+}
+
+.btntrans:hover{
+  cursor: pointer;
+  text-decoration:underline;
+}
+
+.pl2{
+  padding-left: 0.2rem;
+}
+
+.first p{
+  font-size: 1.4rem;
+  text-align: left;
+  margin: 1.5rem;
+}
+
+.navbar{
+  display: flex;
+    background-color: black;
+    color: white;
+    height: 2.5rem;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 15px;
+    padding: 0 1rem;
+}
+
+.navright{
+  display: flex;
+  width: 4rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pizza-card{
+  background-color: white;
+  box-shadow: 2rem;
+  display: flex;
+  margin: 1rem 1.5rem;
+  width: 20rem;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  height: 28rem;
+}
+
+.pizzaVeg{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+
+.loading{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.table {
+  display: flex;
+  width: 100%;
+  margin-right: 10px; /* Add margin for spacing between table and empty space */
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 8px;
+  border: 1px solid #ddd; /* Optional: Add borders for each cell */
+}
+
+
+.pizza-details{
+  padding: 0rem 1rem;
+}
+
+.pizza-photo{
+  border-bottom: 1px solid black;
+  /* z-index: -1; */
+}
+
+.pizzatype{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.pizza-price{
+  font-size: 1.2rem;
+}
+
+.pizzaAdd{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.btnPizza{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pizzaQuantity{
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+
+.addcart{
+  border: 1px solid #ccc;
+  color: black;
+  background-color: white;
+  font-size: 1rem;
+  border-radius: 10px;
+}
+
+.addcart:hover{
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+/* .list-container button.active {
+  color: #007bff; 
+} */
+
+.sticky{
+  position: sticky;
+  top: 0;
+  z-index: 1000; 
+}
+
+.nonveg{
+  height: 100rem;
+  border: 3px solid red;
+}
+
+.customize{
+  height: 100rem;
+  border: 3px solid green;
+}
+
+.list-container {
+  display: flex;
+  width: 100%;
+  background-color: #eeecec;
+}
+
+.list-button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  color: #333; /* Adjust the color as needed */
+  border-bottom: 2px solid transparent;
+}
+
+.list-button:hover {
+  border-bottom: 2px solid #b9dbff; /* Change the color for the underline on hover */
+}
+
+.list-button.active {
+  border-bottom: 2px solid #007bff; /* Change the color for the underline on active */
+}
+
+#custom{
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+#customHeading{
+  margin: 2rem 0rem;
+}
+
+.customPizzaType{
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 900px){
+  .css-vw2ssw-MuiContainer-root {
+    max-width: 100vw;
+  }
+}
+
+.pizzaspan{
+  display: flex;
+  flex-direction: column;
+}
+
+.pizzarate{
+  background-color: #53d953;
+  color: black;
+  display: block;
+  width: 3rem;
+  margin: 1rem auto 0rem;
+  border-radius: 0.4rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.addCheese{
+  border: 3px solid #ccc;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-radius: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#addcheesepara{
+  font-size: 1.5rem;
+  width: 25rem;
+  display: flex;
+  justify-content: flex-end;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#addcheeserate{
+  font-size: 1.2rem;
+  margin: 1rem auto;
+}
+
+.btnpizza{
+  width: 50rem;
+}
+
+.topping{
+  display: flex !important;
+}
+
+.custom{
+  display: flex;
+}
+
+
+.stickyPlaceOrder {
+  position: fixed;
+  top: 6rem;
+  right: 0;
+  width: 40%;
+  padding: 10px;
+  background-color: white;
+  z-index: 1000;
+}
+
+.dropdownlog{
+  padding: 1rem;
+}
+
+.dropdownheading{
+  text-align: center;
+}
+
+.dropdownbtn{
+  text-align: center;
+  padding: 1rem;
+}
+
+.dropdownbtnss{
+  text-align: center;
+  padding: 0.5rem 3rem;
+}
+
+.catth3{
+  margin-bottom: 0;
+  font-size: 1.4rem;
+}
+
+.cattp{
+  margin-top: 0.2rem;
+  font-size: 1.1rem;
+}
+
+.cartt{
+  margin: auto 3rem;
+}
+
+.cartthr{
+  margin-top: 1.5rem;
+}
+
+#pizzaAdd{
+  align-items: center;
+}
+
+.cartSubtotal{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cartHead{
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.carttprice{
+  color: #32329b;
+  font-size: 1.2rem;
+}
+
+
+.pizzavegi{
+ 
+}
+
+.currentOrder{
+  padding: 1rem 1rem 4rem 1rem;
+  width: 80%;
+}
+
+.iconForDelivery{
+  margin-top: 1.5rem;
+}
+
+.eachOrder{
+  margin-bottom: 2rem;
+}
+
+
+.iconBox{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1rem;
+  border: 3px solid gray;
+  border-radius: 20px;
+  width: 70%;
+}
+
+.iconForDelLine{
+  width: 100%;
+  height: 10px;
+  border-radius: 20px;
+}
+
+.lastTD{
+  width: 60%;
+}
+
+.secondlastTD{
+  width: 7%;
+}
+
+.secondTD{
+  width: 12%;
+}
+
+.iconbtn{
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+
+.iconbtn span{
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.orderDelivered{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.hhh{
+  display: flex;
+  align-items: center;
+  color: green;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.baseStock{
+  margin: 1rem;
 }
